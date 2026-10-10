@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   MIZERO AWARDS ADMIN — design tokens (Tailwind v4 theme)
+
+   These tokens become utility classes, e.g. --color-primary → bg-primary,
+   --color-line → border-line. Change the palette here and the whole
+   dashboard restyles.
+   ========================================================================== */
+@theme {
+  /* Brand */
+  --color-primary: #3b1b6b;
+  --color-primary-dark: #28134d;
+  --color-gold: #f4b942;
+
+  /* Surfaces */
+  --color-canvas: #f8f7fc; /* page background */
+  --color-surface: #ffffff; /* cards */
+
+  /* Text */
+  --color-ink: #17151c; /* main text */
+  --color-muted: #6b6875; /* secondary text */
+  --color-line: #e6e3ec; /* borders */
+
+  /* Status */
+  --color-success: #22a06b;
+  --color-error: #d64545;
+
+  /* Soft status backgrounds */
+  --color-success-soft: #e9f8f1;
+  --color-error-soft: #fcecec;
+  --color-gold-soft: #fdf5e3;
+
+  /* Fonts — system stack so the build never depends on a font CDN. */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}
+
+/* Thin, unobtrusive scrollbars inside scrollable panels. */
+* {
+  scrollbar-width: thin;
+}
